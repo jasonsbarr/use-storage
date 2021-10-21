@@ -1,0 +1,25 @@
+{
+  "name": "@jasonsbarr/use-storage",
+  "version": "1.0.0",
+  "description": "Two simple React hooks for using browser storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jasonsbarr/use-storage.git"
+  },
+  "keywords": [
+    "localstorage",
+    "sessionstorage",
+    "react-hooks",
+    "react"
+  ],
+  "author": "Jason Barr <jason@jasonsbarr.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonsbarr/use-storage/issues"
+  },
+  "homepage": "https://github.com/jasonsbarr/use-storage#readme"
+}
