@@ -24,5 +24,6 @@
   "homepage": "https://github.com/jasonsbarr/use-storage#readme",
   "dependencies": {
     "react": "^17.0.2"
-  }
+  },
+  "devDependencies": {}
 }
