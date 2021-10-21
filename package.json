@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/jasonsbarr/use-storage/issues"
   },
-  "homepage": "https://github.com/jasonsbarr/use-storage#readme"
+  "homepage": "https://github.com/jasonsbarr/use-storage#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
 }
