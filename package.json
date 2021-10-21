@@ -25,5 +25,7 @@
   "dependencies": {
     "react": "^17.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
 }
