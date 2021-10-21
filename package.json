@@ -4,7 +4,8 @@
   "description": "Two simple React hooks for using browser storage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ./src"
   },
   "repository": {
     "type": "git",
