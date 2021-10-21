@@ -4,7 +4,13 @@ const useSessionStorage = (key, initialValue = {}, reviver = null) => {
   const [state, setState] = useState(() => {
     let item = window.sessionStorage.getItem(key);
 
-    item ?? window.sessionStorage.setItem(key, JSON.stringify(initialValue));
+    item ??
+      window.sessionStorage.setItem(
+        key,
+        typeof initialValue === "string"
+          ? initialValue
+          : JSON.stringify(initialValue)
+      );
 
     try {
       item = JSON.parse(item, reviver);

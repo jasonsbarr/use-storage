@@ -4,7 +4,13 @@ const useLocalStorage = (key, initialValue = {}, reviver = null) => {
   const [state, setState] = useState(() => {
     let item = window.localStorage.getItem(key);
 
-    item ?? window.localStorage.setItem(key, JSON.stringify(initialValue));
+    item ??
+      window.localStorage.setItem(
+        key,
+        typeof initialValue === "string"
+          ? initialValue
+          : JSON.stringify(initialValue)
+      );
 
     try {
       item = JSON.parse(item, reviver);
