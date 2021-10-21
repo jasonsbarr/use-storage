@@ -18,7 +18,7 @@ import { useLocalStorage } from "@jasonsbarr/use-storage";
 
 - `use(Local|Session)Storage(key[, defaultValue = {}, deserializer = null]);`
 
-The initial call to `useLocalStorage` returns an array pair containing the JSON parsed item for `key`, or just a string if the value is a simple string, as well as a function to update the value for `key`. If there is no value in storage for `key`, you can pass in a default initial value as the second argument to `useLocalStorage`.
+The initial call to `useLocalStorage` returns an array pair containing the JSON parsed item for `key`, or just a string if the value is a simple string, as well as a function to update the value for `key`. If there is no value in storage for `key`, you can pass in a default initial value as the second argument to `useLocalStorage`. If your default value is a string it will be used as-is, otherwise it will have `JSON.stringify` called on it if it needs to be inserted into browser storage.
 
 ```js
 const [value, setValue] = useLocalStorage("key", "default value");
