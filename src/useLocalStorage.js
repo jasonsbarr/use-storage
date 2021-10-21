@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const useLocalStorage = (key, initialValue = {}) => {
+const useLocalStorage = (key, initialValue = {}, reviver = null) => {
   const [state, setState] = useState(() => {
     let item = window.localStorage.getItem(key);
 
     item ?? window.localStorage.setItem(key, JSON.stringify(initialValue));
 
     try {
-      item = JSON.parse(item);
+      item = JSON.parse(item, reviver);
     } catch (e) {
       // item is already set to the retrieved value, if any
     }

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const useSessionStorage = (key, initialValue = {}) => {
+const useSessionStorage = (key, initialValue = {}, reviver = null) => {
   const [state, setState] = useState(() => {
     let item = window.sessionStorage.getItem(key);
 
     item ?? window.sessionStorage.setItem(key, JSON.stringify(initialValue));
 
     try {
-      item = JSON.parse(item);
+      item = JSON.parse(item, reviver);
     } catch (e) {
       // item is already set to the retrieved value, if any
     }
