@@ -1,6 +1,6 @@
 {
   "name": "@jasonsbarr/use-storage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Two simple React hooks for using browser storage",
   "main": "index.js",
   "scripts": {
